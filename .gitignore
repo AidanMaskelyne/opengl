@@ -1,4 +1,12 @@
+# Build output files
 target/
 
+# Linux build files
 Makefile
 *.make
+
+# Windows build files
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.*
