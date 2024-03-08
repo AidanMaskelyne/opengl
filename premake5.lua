@@ -15,11 +15,13 @@ project "OpenGL"
 	}
 
 	includedirs {
+		"deps/glfw/include",
 		"deps/glad/include",
 	}
 
 	filter { "system:linux" }
-		links { "glfw" }
+		libdirs { "deps/glfw/lib/linux" }
+		links { "glfw3" }
 	filter { "system:windows" }
 		-- TODO: Link pre-built binaries
 		-- TODO: Add GLFW include dirs
