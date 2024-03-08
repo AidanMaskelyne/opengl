@@ -18,14 +18,12 @@ project "OpenGL"
 	includedirs {
 		"deps/glfw/include",
 		"deps/glad/include",
-		"deps/glfw/include",	-- Only needed for Windows atm
 	}
 
 	filter { "system:linux" }
 		libdirs { "deps/glfw/lib/linux" }
 		links { "glfw3" }
 	filter { "system:windows" }
-		-- TODO: Link pre-built binaries
 		libdirs { "deps/glfw/lib/windows" }
 		links { "glfw3.lib" }
 	filter {  }
